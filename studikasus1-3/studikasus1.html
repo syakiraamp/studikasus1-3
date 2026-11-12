@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Sekolah</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 30px;
+      background: white;
+      color: black;
+    }
+
+    body.gelap {
+      background: black;
+      color: white;
+    }
+
+    .info {
+      background: black;
+      color: white;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+
+    body.gelap .info {
+      background: grey;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>SMK MAJU Jaya</h1>
+  <p>Jurusan Rekayasa Perangkat Lunak.</p>
+  <button id="btnTema">Mode Gelap</button>
+
+  <div class="info">
+    <h3>Informasi Sekolah</h3>
+    <p>Selamat datang di SMK MAJU Jaya!</p>
+  </div>
+
+  <script>
+    const btnTema = document.getElementById('btnTema');
+
+    btnTema.addEventListener('click', () => {
+      document.body.classList.toggle('gelap');
+
+      if (document.body.classList.contains('gelap')) {
+        btnTema.textContent = 'Mode Terang';
+      } else {
+        btnTema.textContent = 'Mode Gelap';
+      }
+    });
+  </script>
+
+</body>
+</html>
